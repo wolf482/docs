@@ -1,4 +1,4 @@
-Hi Susan,
+jdbc:postgresql://rhdh-secret.sonataflow-infra:5432/Sonataflow/currentSchema-sonataflow-platform-data-index-service
 
 I hope you’re doing well. I’m reaching out regarding an urgent issue we’ve encountered with the Red Hat Developer Hub (RHDH) Orchestrator Operator release 1.5.0.
 
