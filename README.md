@@ -1,14 +1,24 @@
-# Install JFrog CLI first
-# https://jfrog.com/getcli/
+Hi Susan,
 
-# Configure Artifactory
-jfrog rt c artifactory-server --url=https://docker-cto-dev-local.artifactrepository.citigroup.net --user=<username> --password=<password>
+I hope you’re doing well. I’m reaching out regarding an urgent issue we’ve encountered with the Red Hat Developer Hub (RHDH) Orchestrator Operator release 1.5.0.
 
-# Search for Docker images
-jfrog rt s "cti-orion-177398/rhdh-hub-rh*"
+Issue Summary
+When attempting to create a Custom Resource (CR) for the SonataFlow Orchestrator Platform, the reconciliation fails if the backstageapi is not pre-existing. The Orchestrator Operator does not create the platform and instead complains about the missing backstage CRD.
 
-# List all Docker repositories
-jfrog rt curl "/api/docker/<repo-key>/v2/_catalog"
+Root Cause & Context
+This was hard to diagnose initially because our earlier environment (using version 1.0.3) had a pre-existing backstageapi, so we didn’t encounter the issue.
 
-# Get image manifest
-jfrog rt curl "/api/docker/<repo-key>/v2/<image>/manifests/<tag>"
+Now, in a new cluster (fresh install of 1.5.0), the Orchestrator Operator fails to proceed unless the backstageapi is manually provisioned first.
+
+We are not installing RHDH via Helm charts or the RHDH Operator, so we need guidance on how to handle this dependency in the current release.
+
+Request for Immediate Assistance
+Given that this is blocking new deployments, we’d appreciate:
+
+Confirmation if this is a known issue and if there’s a recommended workaround.
+
+Clarification on whether the Orchestrator Operator should handle the backstageapi dependency automatically (or if manual steps are required).
+
+Any patches or fixes planned for this in the near term.
+
+This is time-sensitive, so we’d greatly appreciate a prompt response or escalation to the appropriate engineering team. Let me know if you need additional details.
