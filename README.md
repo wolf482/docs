@@ -1,4 +1,11 @@
 jdbc:postgresql://rhdh-secret.sonataflow-infra:5432/Sonataflow/currentSchema-sonataflow-platform-data-index-service
+Vendor Collaboration: Direct email correspondence is essential for clarifying technical specifications, sharing certification artifacts, and coordinating validation timelines.
+
+Efficiency: Current communication barriers (e.g., restricted external domains) delay response times, impacting project milestones.
+
+Compliance Assurance: All communications will adhere to corporate security policies, and sensitive data will be shared via approved encrypted channels (e.g., Red Hat Secure Portal or PGP).
+
+
 
 I hope you’re doing well. I’m reaching out regarding an urgent issue we’ve encountered with the Red Hat Developer Hub (RHDH) Orchestrator Operator release 1.5.0.
 
