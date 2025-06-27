@@ -1,71 +1,117 @@
 jdbc:postgresql://rhdh-secret.sonataflow-infra:5432/Sonataflow/currentSchema-sonataflow-platform-data-index-service
 
 
-Migration Plan as a Scrum Master
-Objective:
-Break down the provided steps into actionable Jira tasks and subtasks for the team to execute in a sprint.
-
-Jira Tasks and Subtasks
-1. Task: Openshift Quotas and Resources Adjustment
-Description: Adjust resource quotas for the UAT environment.
+1. Task: Deploy and Run DAGs
+Description: Set up and execute Directed Acyclic Graphs (DAGs) for migration workflows.
 Subtasks:
 
-Adjust storage quota by +156B.
+Configure and deploy ETL DAGs in the target environment.
 
-Adjust CPU quota by +3cpu.
+Validate DAG execution logs for errors.
 
-Adjust memory quota by +106B.
-
-Increase pod limit by +9.
-
-2. Task: Database Setup for RHDH on UAT PostgreSQL
-Description: Prepare the database for RHDH in the UAT environment.
+2. Task: Install and Configure Keycloak
+Description: Set up Keycloak for authentication in RHDH.
 Subtasks:
 
-Create an empty database for RHDH on UAT PostgreSQL.
+Create a new Keycloak subscription in OpenShift.
 
-Create required DB roles and schemas (including Keycloak schema).
+Deploy Keycloak Helm charts in the cti-evcs-orion-177399 namespace.
 
-Collaborate with DBA team to assess filesystem size requirements.
+Validate Keycloak pod health post-deployment.
 
-3. Task: Secrets Management for UAT
-Description: Consolidate and manage secrets for RHDH UAT.
+3. Task: Deploy Red Hat Developer Hub (RHDH)
+Description: Initialize RHDH with fresh DB and plugins.
 Subtasks:
 
-Consolidate existing Orion UAT secrets with RHDH-specific secrets.
+Database Setup:
 
-Create and store secrets for UAT in HC Vault.
+Initialize a fresh PostgreSQL DB for RHDH.
 
-4. Task: RHDH Helm Charts Configuration
-Description: Update and optimize Helm charts for RHDH UAT deployment.
+Validate DB permissions and plugin compatibility.
+
+RBAC & Permissions:
+
+Configure Role-Based Access Control (RBAC) in RHDH.
+
+Map existing Backstage permissions to RHDH.
+
+Login & Plugins:
+
+Integrate Keycloak for SSO.
+
+Install and validate required RHDH plugins (TechDocs, Catalog, etc.).
+
+TechDocs Onboarding:
+
+Migrate existing TechDocs content to RHDH.
+
+4. Task: Data Migration
+Description: Migrate data from Backstage UAT DB to RHDH DB.
 Subtasks:
 
-Update SSL SAN certificates in Helm charts.
+Preparation:
 
-Create and optimize uat/values.yaml for RHDH.
+Identify DB objects to migrate (reuse Andromeda migration list).
 
-Consolidate RBAC config maps.
+Export data from Backstage UAT DB.
 
-Remove hardcoded values from configurations.
+Execution:
 
-Configure liveness probes.
+Import data into RHDH DB, renaming schemas from date to self-service.
 
-Ensure app-config.yaml and plugins release versions match the release.
+For CDS, sync entities via rhdh-entities YAML files in Bitbucket (DEVX repo).
 
-Sync entities' timing configurations.
+Validation:
 
-5. Task: ETL Setup for RHDH UAT
-Description: Prepare ETL pipelines for RHDH UAT.
+Verify data integrity post-migration.
+
+Cross-check schema permissions and relationships.
+
+5. Task: Keycloak Instance Deployment
+Description: Configure Keycloak realms for RHDH.
 Subtasks:
 
-Create new repositories for ETL entities.
+Create a new Keycloak realm for RHDH.
 
-Deploy and validate DAGs for ETL processes.
+Set up client roles, users, and identity providers.
 
-6. Task: Keycloak Helm Charts Deployment
-Description: Deploy and configure Keycloak for UAT.
+Test SSO integration with RHDH.
+
+6. Task: SSL Route Configuration
+Description: Secure RHDH and Keycloak with SSL.
 Subtasks:
 
-Prepare UAT Helm chart for Keycloak instance.
+Generate/update SSL certificates for RHDH routes.
 
-Update SSL SAN certificates in Keycloak configurations.
+Configure OpenShift routes with HTTPS.
+
+Validate SSL handshake and certificate trust chain.
+
+7. Task: Post-Migration Validations
+Description: Ensure all components work post-migration.
+Subtasks:
+
+Smoke-test RHDH UI, plugins, and search functionality.
+
+Validate Keycloak authentication flows.
+
+Verify TechDocs rendering and catalog entities.
+
+8. Task: Monitoring and Alerts
+Description: Set up proactive monitoring.
+Subtasks:
+
+Configure database monitoring alerts (e.g., CPU, memory, connection spikes).
+
+Set up alerts for short URL service health.
+
+9. Task: URL Flip (Go-Live)
+Description: Redirect traffic from Backstage to RHDH.
+Subtasks:
+
+Update DNS/CNAME records to point to RHDH routes.
+
+Communicate the change to stakeholders.
+
+Monitor for post-flip issues.
+
