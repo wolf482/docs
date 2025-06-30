@@ -1,3 +1,25 @@
+
+
+Hi [Teammate’s Name],
+
+I’m following up on the orchestrator certification—since you volunteered to lead this, I wanted to check:
+
+Have you reviewed the documentation I sent last week? If not, please confirm when you can.
+
+What’s your plan for updating the ISDP document? I’d like to align timelines to avoid last-minute delays.
+
+Do you need any support from me? I’ve already invested extra time on this, so I want to ensure you have what you need to move forward.
+
+Let’s wrap this up efficiently—please share your progress by [deadline, e.g., EOD tomorrow].
+
+Best,
+[Your Name]
+
+
+
+
+
+
 Subject: ilab Environment Ready – Access & Backup/Restore Instructions
 
 Hi [Developer Lead's Name],
