@@ -1,117 +1,50 @@
-jdbc:postgresql://rhdh-secret.sonataflow-infra:5432/Sonataflow/currentSchema-sonataflow-platform-data-index-service
+Subject: ilab Environment Ready – Access & Backup/Restore Instructions
 
+Hi [Developer Lead's Name],
 
-1. Task: Deploy and Run DAGs
-Description: Set up and execute Directed Acyclic Graphs (DAGs) for migration workflows.
-Subtasks:
+The ilab environment is now available for your team. To ensure smooth collaboration and access control, I’d appreciate your help in identifying who will be working in this space. Here’s what you need to know:
 
-Configure and deploy ETL DAGs in the target environment.
+1. Environment Access & Collaboration
+Current Access: You (as the lead) have admin-level access to the ilab project in OpenShift.
 
-Validate DAG execution logs for errors.
+Additional Collaborators: Could you confirm which developers will need access? Please share their:
 
-2. Task: Install and Configure Keycloak
-Description: Set up Keycloak for authentication in RHDH.
-Subtasks:
+Names
 
-Create a new Keycloak subscription in OpenShift.
+OpenShift usernames (or emails, if SSO-based)
 
-Deploy Keycloak Helm charts in the cti-evcs-orion-177399 namespace.
+Required permissions (e.g., edit, view, admin)
 
-Validate Keycloak pod health post-deployment.
+Once confirmed, I’ll ensure permissions are assigned promptly.
 
-3. Task: Deploy Red Hat Developer Hub (RHDH)
-Description: Initialize RHDH with fresh DB and plugins.
-Subtasks:
+2. Backup & Restore (Self-Service)
+To safeguard against accidental changes, here’s how to back up and restore resources (Routes, ConfigMaps, Secrets, etc.):
 
-Database Setup:
+Backup All Resources
+bash
+mkdir ilab-backup && cd ilab-backup  
+oc get all,cm,secret,route,svc,deployments -n ilab -o yaml > ilab-backup.yaml  
+For granular backups (e.g., separate files per resource type):
 
-Initialize a fresh PostgreSQL DB for RHDH.
+bash
+oc get -n ilab -o=yaml all > all-resources.yaml  
+oc get -n ilab -o=yaml cm > configmaps.yaml  
+oc get -n ilab -o=yaml secret > secrets.yaml  
+# ... repeat for other types (route, svc, etc.)  
+Restore from Backup
+bash
+oc apply -f ilab-backup.yaml -n ilab  
+# OR (if using separate files):  
+oc apply -f . -n ilab  
+3. Platform Updates & Communication
+We’ll notify you in advance of any platform-level changes (e.g., OpenShift upgrades).
 
-Validate DB permissions and plugin compatibility.
+For critical updates, we can coordinate backups/restores together.
 
-RBAC & Permissions:
+Next Steps:
 
-Configure Role-Based Access Control (RBAC) in RHDH.
+Reply with your team’s access needs.
 
-Map existing Backstage permissions to RHDH.
+Let me know if you’d like a quick demo of backup/restore or permission management.
 
-Login & Plugins:
-
-Integrate Keycloak for SSO.
-
-Install and validate required RHDH plugins (TechDocs, Catalog, etc.).
-
-TechDocs Onboarding:
-
-Migrate existing TechDocs content to RHDH.
-
-4. Task: Data Migration
-Description: Migrate data from Backstage UAT DB to RHDH DB.
-Subtasks:
-
-Preparation:
-
-Identify DB objects to migrate (reuse Andromeda migration list).
-
-Export data from Backstage UAT DB.
-
-Execution:
-
-Import data into RHDH DB, renaming schemas from date to self-service.
-
-For CDS, sync entities via rhdh-entities YAML files in Bitbucket (DEVX repo).
-
-Validation:
-
-Verify data integrity post-migration.
-
-Cross-check schema permissions and relationships.
-
-5. Task: Keycloak Instance Deployment
-Description: Configure Keycloak realms for RHDH.
-Subtasks:
-
-Create a new Keycloak realm for RHDH.
-
-Set up client roles, users, and identity providers.
-
-Test SSO integration with RHDH.
-
-6. Task: SSL Route Configuration
-Description: Secure RHDH and Keycloak with SSL.
-Subtasks:
-
-Generate/update SSL certificates for RHDH routes.
-
-Configure OpenShift routes with HTTPS.
-
-Validate SSL handshake and certificate trust chain.
-
-7. Task: Post-Migration Validations
-Description: Ensure all components work post-migration.
-Subtasks:
-
-Smoke-test RHDH UI, plugins, and search functionality.
-
-Validate Keycloak authentication flows.
-
-Verify TechDocs rendering and catalog entities.
-
-8. Task: Monitoring and Alerts
-Description: Set up proactive monitoring.
-Subtasks:
-
-Configure database monitoring alerts (e.g., CPU, memory, connection spikes).
-
-Set up alerts for short URL service health.
-
-9. Task: URL Flip (Go-Live)
-Description: Redirect traffic from Backstage to RHDH.
-Subtasks:
-
-Update DNS/CNAME records to point to RHDH routes.
-
-Communicate the change to stakeholders.
-
-Monitor for post-flip issues.
-
+This way, we can balance autonomy for your team with stability for the environment.
