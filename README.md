@@ -1,38 +1,48 @@
-1. Bundle Approach Finalization
-Tomorrow, we must decide whether to:
+Subject: Action Plan for Sonata Workflow Deployment – Target July 8
 
-Bundle Serverless Logic within the existing Serverless/Orchestrator RHDH, or
+Dear [Developer/Team Name],
 
-Proceed with the standalone ISRP submission (if bundling is not approved).
+As discussed, to ensure the environment is ready for the Sonata Workflow project deployment by July 8, we need to coordinate the following steps. Below is the action plan and dependencies required from your side:
 
-Preparation:
+1. Immediate Next Steps (Code Push)
+Please ensure the selfservice plugins (backend/frontend) code is pushed to the GitHub remote repo by [deadline, e.g., EOD tomorrow] so we can:
 
-The environment is ready for CIVA scans.
+Mirror dependencies.
 
-The ISDP documentation is pending Arun’s updates (see below).
+Begin CI/CD pipeline setup for 12d iLAB.
 
-2. Immediate Action Items
-@Arun:
+2. Required Inputs from Your Side
+To expedite the process, kindly share:
 
-Upgrade the ISDP document per my feedback and confirm completion by [deadline, e.g., EOD today]. No further delays can be tolerated.
+GitHub repository URL (if not already provided).
 
-@Mohamed:
+Dependency lists:
 
-Secure an ISRP reviewer assignment immediately.
+Frontend: package.json or equivalent.
 
-Confirm during tomorrow’s call:
+Backend: requirements.txt/composer.json or build scripts.
 
-Is there any blocker preventing reviewer assignment?
+Special requirements:
 
-If no, provide a firm timeline for assignment.
+Proprietary/internal dependencies needing mirroring.
 
-3. Contingency Plan
-If the bundling approach is rejected, we must proceed with ISRP submission as-is, given:
+Environment variables/config files (if any).
 
-The environment is CIVA-ready.
+3. CI/CD & Deployment
+We’ll handle the pipeline setup but need confirmation on:
 
-The ISDP will be finalized post-Arun’s updates.
+Workflow approvals: Are there manual gates (e.g., QA sign-off)?
 
-No justification remains for reviewer delay.
+Deployment targets: Specific 12d iLAB environments (dev/staging/prod).
 
-Let’s align tomorrow and close these gaps decisively. The timeline is at risk.
+Post-deployment tests: Any smoke tests to automate?
+
+Timeline
+July 3–4: Code review + dependency mirroring.
+
+July 5–7: CI/CD testing + environment prep.
+
+July 8: Deployment.
+
+Action Requested:
+Please confirm by [date] when the code is pushed and share any blockers. For urgent items, tag me directly.
