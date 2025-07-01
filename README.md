@@ -1,27 +1,26 @@
 Hi Arun,
 
-As discussed in our meeting on [date], I’ve shared all relevant information regarding the RHDH Orchestrator and Serverless Logic Operator ISRP certification, including:
+Following our recent discussions, I want to summarize key action items and pending decisions to ensure progress on the ISRP certification:
 
-Detailed walkthroughs of the iLab setup for CIVA scan testing.
+1. ISDP Document Updates (Your Action Required)
+As discussed, you need to upgrade the ISDP document based on my feedback (shared on [date/location]). Please confirm once this is completed by [deadline, e.g., EOD today/tomorrow]. Let me know if you need clarifications on the requested changes.
 
-Comprehensive documentation and SME guidance on Orchestrator operations.
+2. ISRP Reviewer Assignment (Mohamed’s Action)
+During tomorrow’s SME team call, we must finalize:
 
-Multiple opportunities to address questions (e.g., during our meeting, I confirmed repeatedly if you needed further clarification).
+Decision: Whether to use login bundle or serverless/orchestrator bundle for RHDH.
 
-To ensure we meet the project timeline, I’d like to clarify the following:
+Requirement: An ISRP reviewer must be assigned immediately—no further delays are acceptable.
 
-Action Items for You:
+@Mohamed: As you’re leading communication with the ISRP team, kindly confirm:
 
-Review the provided materials and identify any specific gaps in your understanding by [deadline, e.g., Friday, July 5].
+Is there any blocker preventing the reviewer assignment?
 
-Prepare a list of concrete questions (if any) to discuss in our next sync.
+If none, by when can we expect the reviewer to be assigned?
 
-Lead the [specific task, e.g., upcoming ISDP review meeting] independently, as agreed in our role alignment.
+Next Steps
+Tomorrow’s Call Agenda: Resolve the bundle decision and secure reviewer assignment.
 
-My Support:
+Post-Call: I’ll share minutes with clear action items and owners.
 
-I’m happy to address targeted questions on Orchestrator, but I’ll no longer revisit broad requests like "whole picture" without clear context.
-
-If no gaps are flagged by [deadline], I’ll assume you’re confident to proceed with your assigned tasks. Let me know if you’d like to schedule a short call to address specific items.
-
-Cc’d [Manager/Stakeholder]: For visibility on progress and roadblocks. Let me know if you’d like to discuss resource alignment.
+Urgency: The timeline is at risk without these items closed. Let’s avoid last-minute delays.
