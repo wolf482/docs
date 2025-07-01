@@ -1,26 +1,38 @@
-Hi Arun,
+1. Bundle Approach Finalization
+Tomorrow, we must decide whether to:
 
-Following our recent discussions, I want to summarize key action items and pending decisions to ensure progress on the ISRP certification:
+Bundle Serverless Logic within the existing Serverless/Orchestrator RHDH, or
 
-1. ISDP Document Updates (Your Action Required)
-As discussed, you need to upgrade the ISDP document based on my feedback (shared on [date/location]). Please confirm once this is completed by [deadline, e.g., EOD today/tomorrow]. Let me know if you need clarifications on the requested changes.
+Proceed with the standalone ISRP submission (if bundling is not approved).
 
-2. ISRP Reviewer Assignment (Mohamed’s Action)
-During tomorrow’s SME team call, we must finalize:
+Preparation:
 
-Decision: Whether to use login bundle or serverless/orchestrator bundle for RHDH.
+The environment is ready for CIVA scans.
 
-Requirement: An ISRP reviewer must be assigned immediately—no further delays are acceptable.
+The ISDP documentation is pending Arun’s updates (see below).
 
-@Mohamed: As you’re leading communication with the ISRP team, kindly confirm:
+2. Immediate Action Items
+@Arun:
 
-Is there any blocker preventing the reviewer assignment?
+Upgrade the ISDP document per my feedback and confirm completion by [deadline, e.g., EOD today]. No further delays can be tolerated.
 
-If none, by when can we expect the reviewer to be assigned?
+@Mohamed:
 
-Next Steps
-Tomorrow’s Call Agenda: Resolve the bundle decision and secure reviewer assignment.
+Secure an ISRP reviewer assignment immediately.
 
-Post-Call: I’ll share minutes with clear action items and owners.
+Confirm during tomorrow’s call:
 
-Urgency: The timeline is at risk without these items closed. Let’s avoid last-minute delays.
+Is there any blocker preventing reviewer assignment?
+
+If no, provide a firm timeline for assignment.
+
+3. Contingency Plan
+If the bundling approach is rejected, we must proceed with ISRP submission as-is, given:
+
+The environment is CIVA-ready.
+
+The ISDP will be finalized post-Arun’s updates.
+
+No justification remains for reviewer delay.
+
+Let’s align tomorrow and close these gaps decisively. The timeline is at risk.
