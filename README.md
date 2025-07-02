@@ -1,21 +1,13 @@
-Subject: Planned Leave Request – Confirmation & Contingency Overview
+Hi Pryanka,
 
-Dear Amit,
+I noticed your question about the first column in the app_ecs_dev_users-developer and dashboard.starredDeveloperStacks permissions. To clarify:
 
-I hope this email finds you well. I’m writing to formally request approval for my planned leave from [Dates], which I submitted via [system name, if applicable] on [date].
+The first column typically represents the RBAC role (e.g., developer).
 
-To ensure minimal impact during this period:
+The second column is usually the resource or object (e.g., dashboard.starredDeveloperStacks).
 
-Knowledge Transfer: Completed handover to Citi’s team (Rajesh’s team) and documented all processes.
+The third column defines the permission action (e.g., read).
 
-UAT/Prod Readiness: Confirmed with the team that the current setup is stable for migration (no critical dependencies on my presence).
+This follows the standard Casbin format: role, resource, action. If you’d like, I can share a quick example or documentation to reinforce this. Let me know how I can help!
 
-Coverage: [Colleague Name] will act as the point of contact for any platform-related queries.
-
-Context:
-
-I’ve extended work hours consistently to meet project milestones (including supporting parental leave/honeymoon coverage for peers).
-
-This break is essential to recharge after 10+ months without leave, especially given the intense project phase we’ve navigated.
-
-I’ve copied Neeraj for visibility, as he previously approved similar requests for the team. Please let me know if you’d like to discuss contingencies further.
+Also, since you were just on a call with Vinneet, it might be worth syncing with him to align on any specific nuances for our implementation.
