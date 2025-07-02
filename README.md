@@ -1,15 +1,21 @@
-To meet the July 8 deployment deadline for the Sonata Workflow project in 12d iLAB, we need your support to:
+Subject: Planned Leave Request – Confirmation & Contingency Overview
 
-Push all code (selfservice plugins frontend/backend) to GitHub by [deadline, e.g., EOD 7/3] to:
+Dear Amit,
 
-Start dependency mirroring (time-sensitive due to internal processes).
+I hope this email finds you well. I’m writing to formally request approval for my planned leave from [Dates], which I submitted via [system name, if applicable] on [date].
 
-Configure CI/CD workflows.
+To ensure minimal impact during this period:
 
-Share critical details:
+Knowledge Transfer: Completed handover to Citi’s team (Rajesh’s team) and documented all processes.
 
-GitHub repo URL (if new).
+UAT/Prod Readiness: Confirmed with the team that the current setup is stable for migration (no critical dependencies on my presence).
 
-Dependency lists (package.json, requirements.txt, etc.).
+Coverage: [Colleague Name] will act as the point of contact for any platform-related queries.
 
-Any proprietary/internal dependencies needing special handling.
+Context:
+
+I’ve extended work hours consistently to meet project milestones (including supporting parental leave/honeymoon coverage for peers).
+
+This break is essential to recharge after 10+ months without leave, especially given the intense project phase we’ve navigated.
+
+I’ve copied Neeraj for visibility, as he previously approved similar requests for the team. Please let me know if you’d like to discuss contingencies further.
